@@ -1,5 +1,6 @@
 package mx.unam.tic.diplomado.agenda.modelo.entidades;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 import java.util.Objects;
@@ -31,9 +32,9 @@ import org.hibernate.annotations.FetchMode;
 			@NamedQuery(name ="ventaByProducto", query = "SELECT v FROM Venta v WHERE v.producto.id = :idProducto"),
 			@NamedQuery(name ="ventaByTrabajador", query = "SELECT v FROM Venta v WHERE v.trabajador.id = :idTrabajador")
 			}) */
-public class Venta {
+public class Venta implements Serializable {
 
-	
+	private static final long serialVersionUID = 1L;
 	private Integer idVenta;
 	private Double total;
 	private Integer cantidad;

@@ -1,5 +1,6 @@
 package mx.unam.tic.diplomado.agenda.modelo.entidades;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -11,8 +12,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "t_trabajador")
-public class Trabajador {
+public class Trabajador implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private Integer idTrabajador;
 	private String nombre;
 	private String apellido;
